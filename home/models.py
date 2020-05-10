@@ -248,7 +248,7 @@ class Apartment(models.Model):
     pub_date = models.DateTimeField('Дата публикации', auto_now_add=True)
     contact = models.ForeignKey(Contact, on_delete=models.SET_NULL, null=True, verbose_name='Контактиные данные',
                                 related_name='contact')
-    another_price = models.FloatField('Конвертированная цена', null=True, blank=True, default=0)
+    another_price = models.FloatField('Конвертированная цена.', null=True, blank=True, default=0)
     status = models.BooleanField('Статус объекта недвижимости', default=True)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, verbose_name='Владелец')
 
